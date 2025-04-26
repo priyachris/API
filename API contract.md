@@ -33,7 +33,7 @@ Consider a restaurant as an API:
 **Real API Contract Example:**
 
 ```json
-// Payment API Contract Example
+Payment API Contract Example
 {
   "endpoint": "/v1/payments",
   "method": "POST",
