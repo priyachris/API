@@ -31,9 +31,8 @@ An API (Application Programming Interface) establishes a formal agreement betwee
 
 Consider a restaurant as an API:
 **Real API Contract Example:**
-
-```json
-Payment API Contract Example
+**Payment API Contract Example**
+```
 {
   "endpoint": "/v1/payments",
   "method": "POST",
