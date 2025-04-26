@@ -48,7 +48,8 @@ Consider a restaurant as an API:
     "rate_limits": "Max 100 requests per minute"
   }
 }
-# Payment Resource
+```
+# Payment resource
 
 The Payment resource represents a financial transaction in the system.
 
@@ -78,6 +79,7 @@ Content-Type: application/json
   "payment_method_id": "pm_123456789",
   "description": "Payment for order #1234"
 }
+```
 | Parameter | Type | Description | Constraints |
 |-----------|------|-------------|------------|
 | amount | number | The payment amount | > 0 |
@@ -108,6 +110,7 @@ Content-Type: application/json
   "payment_method_id": "pm_123456789",
   "description": "Payment for order #1234"
 }
+```
 | Field | Type | Description |
 |-------|------|-------------|
 | id | string | Unique identifier for the payment |
@@ -122,14 +125,13 @@ Content-Type: application/json
 
 **Documentation Example:**
 
-```markdown
 # Authentication
 
 ## API Key Authentication
 
 All requests to the Payments API must include an API key in the Authorization header:
 
-```http
+```
 Authorization: Bearer your_api_key
 
 API Key Acquisition
@@ -140,7 +142,7 @@ Security Requirements
 API keys must be kept secure and never exposed in client-side code
 Each application should use its own API key
 Rotate keys every 90 days (recommended)
-
+```
 | Status Code | Error Code | Description |
 |-------------|------------|-------------|
 | 401 | unauthorized | No API key provided |
@@ -152,7 +154,7 @@ Rotate keys every 90 days (recommended)
 
 **Example Template:**
 
-```markdown
+
 # API Contract: [Resource Name]
 
 ## Contract Overview
@@ -254,15 +256,6 @@ Request Rate over Time:
                  (Contract Violation)
 ```
 
-```mermaid
-graph TD
-    subgraph "Rate Limit: 100 requests/minute"
-    A[Request rate] -->|Exceeds limit| B[429 Too Many Requests]
-    end
-    
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#f66,stroke:#333,stroke-width:2px
-```
 
 # Error Catalog
 
@@ -280,7 +273,7 @@ All API errors return a consistent JSON structure:
     "documentation_url": "https://example.com/docs/errors/specific_error_code"
   }
 }
-
+```
 | Status Code | Error Type | Description |
 |-------------|------------|-------------|
 | 400 | invalid_request | The request was malformed or missing required parameters |
@@ -293,7 +286,7 @@ All API errors return a consistent JSON structure:
 
 **Documentation Example:**
 
-```markdown
+
 ## Contract Violation Examples
 
 ### Example 1: Invalid Parameter
@@ -337,12 +330,11 @@ Retry-After: 30
     "documentation_url": "https://example.com/docs/errors/rate_limits"
   }
 }
-
+```
 ### 3. Error Remediation Guide
 
 **Documentation Example:**
 
-```markdown
 ## Error Remediation Guide
 
 ### invalid_currency
@@ -366,7 +358,7 @@ const payment = {
   amount: 100,
   currency: "USD" // Valid ISO 4217 code
 };
-
+```
 too_many_requests
 Problem: Your application has exceeded the permitted number of requests in the given time period.
 
@@ -375,7 +367,7 @@ Solution:
 Implement exponential backoff with the Retry-After header value
 Add rate limiting in your client application
 Consider request batching for bulk operations
-
+```
 // Implementation example using exponential backoff
 async function makeRequestWithBackoff(url, options, maxRetries = 3) {
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
@@ -392,14 +384,13 @@ async function makeRequestWithBackoff(url, options, maxRetries = 3) {
     }
   }
 }
-
+```
 ## Versioning and Evolution Documentation
 
 ### 1. Versioning Strategy Documentation
 
 **Documentation Example:**
 
-```markdown
 # API Versioning Strategy
 
 Our API uses date-based versioning to provide a clear, predictable evolution path.
@@ -419,7 +410,7 @@ X-API-Version: 2023-08-15
 
 In URL Path
 https://api.example.com/2023-08-15/payments
-
+```
 Version Lifecycle
 Preview: New versions are released as previews for at least 30 days
 Stable: After preview period, versions are considered stable
@@ -436,7 +427,7 @@ Sunset: End-of-life (minimum 1 year after deprecation notice)
 
 **Documentation Example:**
 
-```markdown
+
 # Change Log
 
 ## Version 2023-08-15
@@ -541,7 +532,7 @@ const getPayment = async (paymentId) => {
     metadata: data.metadata || {} // Handle new field
   };
 };
-
+```
 
 Practical Documentation Exercises
 1. Contract Documentation Template Exercise
@@ -579,7 +570,6 @@ Your template should include sections for:
 
 **Comparison Table:**
 
-```markdown
 # API Documentation Platforms
 
 | Platform | Features | Best For | Pricing |
