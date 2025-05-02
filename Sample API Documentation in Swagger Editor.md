@@ -89,7 +89,6 @@ Open API 3.0.X is the new definition for REST API and it is written in YAML.
 Your goal will be to write OpenAPI 3.0.
 
 Select and remove everything from the editor, and you will see this page.
-![ProjectDiagram](C:\\Users\\z004rv5k\\Downloads\\Swagger\\1.png)
 
 
 
