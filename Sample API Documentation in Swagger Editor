@@ -1,0 +1,91 @@
+How to create swagger documentation for REST API
+
+Swagger documentation is used for REST APIs.
+Swagger outlines the HTTP verb methods (GET, POST, PUT, PATCH, DELETE), along with the request and response parameters and their types.
+
+To accomplish this, you’ll use a free tool called Swagger Editor, an online platform designed to help you create accurate API documentation.
+
+first,
+Choose the endpoint you want to document
+
+openapi: 3.0.0
+info:
+  title: Authentication API
+  description: API for user authentication and authorization
+  version: 1.0.0
+
+paths:
+  /auth/login:
+    post:
+      summary: User login
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                  format: password
+      responses:
+        '200':
+          description: Login successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                  refreshToken:
+                    type: string
+        '401':
+          description: Invalid credentials
+
+  /auth/refresh:
+    post:
+      summary: Refresh access token
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - refreshToken
+              properties:
+                refreshToken:
+                  type: string
+      responses:
+        '200':
+          description: Token refreshed
+        '401':
+          description: Invalid refresh token
+
+
+Create the swagger documentation (swagger editor)
+Once you identified the endpoint for which you want to create the documentation, it’s time to create it.
+
+Open a new tab in your browser and go to this URL: Swagger Editor. You will see the page below.
+
+This is the default example of Open API documentation for a Petstore API. Your goal is to create Swagger 2.0 documentation for your endpoint.
+
+You wonder what is the difference between Open API and Swagger 2.0 documentation. Mainly there are 2 differences.
+
+Swagger 2.0 is the old definition for REST API and it is written in JSONformat.
+Open API 3.0.X is the new definition for REST API and it is written in YAML.
+Your goal will be to write OpenAPI 3.0.
+
+Select and remove everything from the editor, and you will see this page.
+
