@@ -2,7 +2,7 @@
 
 Swagger documentation is integral for REST APIs as it outlines HTTP verb methods (GET, POST, PUT, PATCH, DELETE) along with request and response parameters and their types. You’ll achieve this using Swagger Editor, a free online tool designed for creating accurate API documentation.
 
-## Steps to Create Swagger Documentation
+## Steps to Create API Documentation in Swagger Editor
 
 ### 1. Choose the Endpoint
 
