@@ -92,13 +92,6 @@ Content-Type: application/json
 
 ### 3. Response Format
 
-**Documentation Example:**
-
-```markdown
-## Create Payment Response
-
-### Success Response (200 OK)
-
 ```json
 {
   "id": "pmt_987654321",
@@ -283,9 +276,6 @@ All API errors return a consistent JSON structure:
 
 ### 2. Contract Violation Response Examples
 
-**Documentation Example:**
-
-
 ## Contract Violation Examples
 
 ### Example 1: Invalid Parameter
@@ -331,8 +321,6 @@ Retry-After: 30
 }
 ```
 ### 3. Error Remediation Guide
-
-**Documentation Example:**
 
 ## Error Remediation Guide
 
@@ -423,9 +411,6 @@ Sunset: End-of-life (minimum 1 year after deprecation notice)
 | 2022-05-30 | Sunset | May 30, 2022 | Jan 10, 2023 | Jan 10, 2024 |
 
 ### 2. Change Notification Documentation
-
-**Documentation Example:**
-
 
 # Change Log
 
