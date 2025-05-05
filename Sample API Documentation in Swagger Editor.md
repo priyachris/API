@@ -18,7 +18,7 @@ This is the default example of Open API documentation for a Petstore API. Your g
 You wonder what is the difference between Open API and Swagger 2.0 documentation. Mainly there are 2 differences.
 
 * **Swagger 2.0** is the old definition for REST API and it is written in **JSONformat**.<br>
-* **Open API 3.0.X** is the new definition for REST API and it is written in **YAML**.****
+* **Open API 3.0.X** is the new definition for REST API and it is written in **YAML**.
   
 But you will be writing for OpenAPI 3.0.
 
