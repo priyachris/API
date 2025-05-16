@@ -3,7 +3,7 @@
 
 
 This product variants API endpoint retrieves active variants of a specific product, 
-sorted by price in descending order (highest to lowest), and displaying the third page of results with 25 variants per page.
+sorted by price in descending order (highest to lowest), and displaying the third page of results with 25 records per page.
 
 ## What does this API do
 * Retrieve all variants of a specific product<br>
@@ -39,7 +39,7 @@ Accessing variants (different versions/models) of a specific product<br>
 ```status=active``` - Only showing variants that are currently available/in stock<br>
 ```sort=price``` - Arranging results based on price<br>
 ```order=desc``` - Sorting from highest price to lowest<br>
-```limit=25``` - Showing 25 variants per page<br>
+```limit=25``` - Showing 25 records per page<br>
 ```page=3``` - Displaying the third page of results<br>
 
 **Headers**: (Values sent in HTTP headers, not visible in URL) <br> 
@@ -86,7 +86,7 @@ This JSON response represents page 3 of product variants for a specific product.
 This contains the actual product variant information:
 * Each variant has identifiers, price, status, and inventory count<br>
 * The example shows a blue, medium-sized "Premium Edition" variant<br>
-* The full response would include up to 25 variants (limited by the pagination settings)<br>
+* The full response would include up to 25 records (limited by the pagination settings)<br>
 
 ### Response Headers: Metadata about the response
   ```
